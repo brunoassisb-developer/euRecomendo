@@ -11,34 +11,30 @@
 					busy="{mainView>/busy}"
 					busyIndicatorDelay="{mainView>/delay}"
 					title="{i18n>appTitle}">
-
-		<semantic:customHeaderContent title="{i18n>appTitle}">
-			<Button icon="img/arcelor_logo.png" />
-		</semantic:customHeaderContent>
 		
 		<semantic:content>
 			
 		</semantic:content>
 		
 		<semantic:customFooterContent> 
-			<Button id="buttonApprove" 
-					  icon="sap-icon://thumb-up"
-					  type="Accept" 
-					  text="{i18n>approveButton}" 
-					  press="onApproveRepproveHandler"/>
-					  
-			<Button id="buttonReprove" 
-			          icon="sap-icon://thumb-down"
-					  type="Reject" 
-					  text="{i18n>reproveButton}" 
-					  press="onApproveRepproveHandler"/>
-					  
+			<Button id="buttonCreate" 
+					  icon="sap-icon://add-document"
+					  type="Trasparent" 
+					  text="{i18n>createButton}" 
+					  press="onCreate"/>
+			
+			<ToolbarSpacer/>
+			<ToolbarSpacer/>
+			<ToolbarSpacer/>
+			<ToolbarSpacer/>
+			<ToolbarSpacer/>
+			<ToolbarSpacer/>
+			
 			<Button id="buttonFilter" 
 					icon="sap-icon://filter"
-					type="Emphasized" 
+					type="Trasparent" 
 					text="{i18n>filterButton}" 
-					press="onFilter"
-					visible="false"/>
+					press="onFilter"/>
 		</semantic:customFooterContent>
 
 	</semantic:FullscreenPage>
