@@ -5,7 +5,7 @@ sap.ui.define([
 					"sap/ui/model/FilterOperator",
 					"sap/m/MessageBox",
 					"sap/m/MessageToast",
-					"sap/ui/Device",
+					"sap/ui/Device"
 				], function (
 					BaseController, 
 					JSONModel, 
@@ -43,6 +43,13 @@ sap.ui.define([
 		            oViewModel.setProperty("/delay", iOriginalBusyDelay);
 		          }
 		        );
+			},
+
+			/**
+			 * @public
+			 */
+			onAfterRendering: function(){
+			    this._setTiles();
 			},
 
 			/* =========================================================== */
@@ -91,12 +98,15 @@ sap.ui.define([
 			/* internal methods                                            */
 			/* =========================================================== */
 			/**
+			  * Distribui Tiles na tela principal
 			  * @private
 			  */
-			_clearFilters: function(){
-				this.byId("searchPendente").setValue("");
-				this.byId("searchRecusado").setValue("");
-				this.byId("searchHistorico").setValue("");
+			_setTiles: function(){
+				var oGlobalView = this.getModel("initData"),
+					oViewModel = this.getModel("worklistView");
+					
+				var oData = oGlobalView.getProperty("tiles");
+				oViewModel.setProperty("/tiles", oData);
 			}
 			
 		});

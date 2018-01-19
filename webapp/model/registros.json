@@ -1,0 +1,71 @@
+{
+	"tiles": [
+		{
+			"header": "Ricks Burguer",
+			"info": "Hamburgueria",
+			"province": "Soteco",
+			"city": "Vila Velha",
+			"icon": "sap-icon://bbyd-dashboard",
+			"category": "Lanchonete"
+		},
+		{
+			"header": "Santa Gula",
+			"info": "Lanchonete",
+			"province": "Santa Mônica",
+			"city": "Vila Velha",
+			"icon": "sap-icon://bbyd-dashboard",
+			"category": "Lanchonete"
+		},
+		{
+			"header": "Frutos de Goiás",
+			"info": "Sorveteria",
+			"province": "Itaparica",
+			"city": "Vila Velha",
+			"icon": "sap-icon://bbyd-dashboard",
+			"category": "Sorveteria"
+		},
+		{
+			"header": "Pizzaria 2000",
+			"info": "Pizzaria",
+			"province": "Soteco",
+			"city": "Vila Velha",
+			"icon": "sap-icon://bbyd-dashboard",
+			"category": "Pizzaria"
+		},
+		{
+			"header": "JP",
+			"info": "Bar e Petiscaria",
+			"province": "Soteco",
+			"city": "Vila Velha",
+			"icon": "sap-icon://bbyd-dashboard",
+			"category": "Bar"
+		},
+		{
+			"header": "Rock Burguer",
+			"info": "Lanchonete",
+			"province": "Praia do Canto",
+			"city": "Vitória",
+			"icon": "sap-icon://bbyd-dashboard",
+			"category": "Lanchonete"
+		}
+	],
+	"Province": [
+		{"text": "Soteco"},
+		{"text": "Santa Mônica"},
+		{"text": "Praia do Canto"}
+	],
+	"City": [
+		{"text": "Cariacica"},
+		{"text": "Vila Velha"},
+		{"text": "Vitória"},
+		{"text": "Serra"}
+	],
+	"category": [
+		{"text": "Restaurante"},
+		{"text": "Bar"},	
+		{"text": "Lanchonete"},
+		{"text": "Sorveteria"},
+		{"text": "Outros"}
+	]
+	
+}
