@@ -1,13 +1,45 @@
-<mvc:View controllerName="com.sap.euRecomendo.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
-	<App id="idAppControl">
-		<pages>
-			<Page title="{i18n>appTitle}">
-				<content>
-					
-					<Text text="teste"></Text>
-				</content>
-			</Page>
-		</pages>
-	</App>
+<mvc:View controllerName="com.sap.euRecomendo.controller.Main" 
+		  xmlns:html="http://www.w3.org/1999/xhtml" 
+		  xmlns:mvc="sap.ui.core.mvc"
+		  displayBlock="true" 
+		  xmlns="sap.m"
+		  xmlns:semantic="sap.m.semantic">
+	
+	<semantic:FullscreenPage
+					id="page"
+					showNavButton="false"
+					busy="{mainView>/busy}"
+					busyIndicatorDelay="{mainView>/delay}"
+					title="{i18n>appTitle}">
+
+		<semantic:customHeaderContent title="{i18n>appTitle}">
+			<Button icon="img/arcelor_logo.png" />
+		</semantic:customHeaderContent>
+		
+		<semantic:content>
+			
+		</semantic:content>
+		
+		<semantic:customFooterContent> 
+			<Button id="buttonApprove" 
+					  icon="sap-icon://thumb-up"
+					  type="Accept" 
+					  text="{i18n>approveButton}" 
+					  press="onApproveRepproveHandler"/>
+					  
+			<Button id="buttonReprove" 
+			          icon="sap-icon://thumb-down"
+					  type="Reject" 
+					  text="{i18n>reproveButton}" 
+					  press="onApproveRepproveHandler"/>
+					  
+			<Button id="buttonFilter" 
+					icon="sap-icon://filter"
+					type="Emphasized" 
+					text="{i18n>filterButton}" 
+					press="onFilter"
+					visible="false"/>
+		</semantic:customFooterContent>
+
+	</semantic:FullscreenPage>
 </mvc:View>
