@@ -4,16 +4,14 @@ sap.ui.define([
 					"sap/ui/model/Filter",
 					"sap/ui/model/FilterOperator",
 					"sap/m/MessageBox",
-					"sap/m/MessageToast",
-					"sap/ui/Device"
+					"sap/m/MessageToast"
 				], function (
 					BaseController, 
 					JSONModel, 
 					Filter, 
 					FilterOperator, 
 					MessageBox,
-					MessageToast,
-					Device) {
+					MessageToast) {
 	
 		"use strict";
 
@@ -36,7 +34,7 @@ sap.ui.define([
 					info : {}
 				});
 				
-				this.setModel(oViewModel, "worklistView");
+				this.setModel(oViewModel, "mainView");
 				
 		        this.getOwnerComponent().getModel().metadataLoaded().then(function () {
 		            // Restore original busy indicator delay for the worklist view
@@ -105,8 +103,12 @@ sap.ui.define([
 				var oGlobalView = this.getModel("initData"),
 					oViewModel = this.getModel("worklistView");
 					
+				oViewModel.setProperty("/busy", true);
+				
 				var oData = oGlobalView.getProperty("tiles");
 				oViewModel.setProperty("/tiles", oData);
+				
+				oViewModel.setProperty("/busy", false);
 			}
 			
 		});
