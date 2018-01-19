@@ -1,0 +1,56 @@
+@charset "ISO-8859-1";
+
+
+.sapMPage.sapUiContentPadding>section {
+    padding: 0rem;
+}
+
+.dtailBackGround{
+	background-color: #006ca7;
+}
+
+.sapMNLB-AuthorPicture .sapUiIcon {
+    color: #666666;
+    font-size: 2.5rem;
+}
+
+.bordetext{
+	border-bottom-color: rgb(191, 191, 191);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.fontdetail{
+	color: #707070;
+}
+
+.fontdest{
+	color: #040404;
+	font-size: 0.975rem;
+}
+
+.sapUiFormLblColon .sapUiFormElementLbl>.sapMLabel:after {
+    content: "";
+}
+
+.tituloef {
+	color: #666666;
+    text-shadow:  1px 1px 1px #cccccc;
+}
+
+.sapMIBar-CTX .sapMTitle {
+    color: #666666;
+    text-shadow:  1px 1px 1px #cccccc;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.sapMBarRight, .sapMBarRight>.sapMBarChild:last-child {
+    margin-right: 0.25rem;
+    margin-top: 0.3rem;
+}
+.alinglogo{
+	    vertical-align: 0 !important;
+	    margin-right: 0.25rem !important;
+}
