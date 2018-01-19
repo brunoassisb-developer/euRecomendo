@@ -31,6 +31,7 @@ sap.ui.define([
 				// Model used to manipulate control states
 				oViewModel = new JSONModel({
 					busy : true,
+					delay: 0,
 					info : {}
 				});
 				
@@ -101,7 +102,7 @@ sap.ui.define([
 			  */
 			_setTiles: function(){
 				var oGlobalView = this.getModel("initData"),
-					oViewModel = this.getModel("worklistView");
+					oViewModel = this.getModel("mainView");
 					
 				oViewModel.setProperty("/busy", true);
 				

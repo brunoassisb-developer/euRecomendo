@@ -84,7 +84,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "app.i18n.i18n"
+					"bundleName": "com.sap.euRecomendo.i18n.i18n"
 				}
 			},
 			"initData": {
