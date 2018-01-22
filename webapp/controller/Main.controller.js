@@ -111,6 +111,16 @@ sap.ui.define([
 			onFilterNo: function(oEvent){
 				this._oDialogFilterTiles.close();
 			},
+			
+			/**
+			 * @public
+			 */	
+			onFilterReset: function(oEvent){
+				this.byId("searchTileName").setValue("");
+				this.byId("searchTileCategory").setValue("");
+				this.byId("searchTileProvince").setValue("");
+				this.byId("searchTileCity").setValue("");
+			},
 
 			/**
 			 * @public
@@ -328,12 +338,15 @@ sap.ui.define([
 					oViewModel = this.getModel("mainView"),
 					oItems = [];
 					
+				var sLikes = 1000;
+					
 				oViewModel.setProperty("/busy", true);
 				
 				//Set Tiles
 				var oData = oGlobalView.getProperty("/tiles");
 				oData.forEach(function(oItem) {
-					oItem.likes = '100';
+					sLikes -= 105;
+					oItem.likes = sLikes;
 					oItems.push(oItem);
 				}, this);
 				

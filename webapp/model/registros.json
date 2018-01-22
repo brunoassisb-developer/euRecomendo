@@ -5,7 +5,7 @@
 			"info": "Hamburgueria",
 			"province": "Soteco",
 			"city": "Vila Velha",
-			"icon": "img/Ricks.png",
+			"icon": "sap-icon://meal",
 			"category": "Lanchonete"
 		},
 		{
@@ -13,7 +13,7 @@
 			"info": "Lanchonete",
 			"province": "Santa Mônica",
 			"city": "Vila Velha",
-			"icon": "img/Santa.png",
+			"icon": "sap-icon://meal",
 			"category": "Lanchonete"
 		},
 		{
@@ -21,7 +21,7 @@
 			"info": "Sorveteria",
 			"province": "Itaparica",
 			"city": "Vila Velha",
-			"icon": "img/Frutos.jpg",
+			"icon": "sap-icon://retail-store",
 			"category": "Sorveteria"
 		},
 		{
@@ -29,7 +29,7 @@
 			"info": "Pizzaria",
 			"province": "Soteco",
 			"city": "Vila Velha",
-			"icon": "img/Pizzaria.jpg",
+			"icon": "sap-icon://meal",
 			"category": "Pizzaria"
 		},
 		{
@@ -37,7 +37,7 @@
 			"info": "Bar e Petiscaria",
 			"province": "Soteco",
 			"city": "Vila Velha",
-			"icon": "img/JP.jpg",
+			"icon": "sap-icon://meal",
 			"category": "Bar"
 		},
 		{
@@ -45,25 +45,22 @@
 			"info": "Lanchonete",
 			"province": "Praia do Canto",
 			"city": "Vitória",
-			"icon": "img/Rock.png",
+			"icon": "sap-icon://meal",
 			"category": "Lanchonete"
 		}
 	],
 	"province": [
-		{"text": ""},
 		{"text": "Soteco"},
 		{"text": "Santa Mônica"},
 		{"text": "Praia do Canto"}
 	],
 	"city": [
-		{"text": ""},
 		{"text": "Cariacica"},
 		{"text": "Vila Velha"},
 		{"text": "Vitória"},
 		{"text": "Serra"}
 	],
 	"category": [
-		{"text": ""},
 		{"text": "Restaurante"},
 		{"text": "Bar"},	
 		{"text": "Lanchonete"},
