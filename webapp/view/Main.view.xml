@@ -3,6 +3,7 @@
 		  xmlns:mvc="sap.ui.core.mvc"
 		  displayBlock="true" 
 		  xmlns="sap.m"
+		  xmlns:l="sap.ui.layout"
 		  xmlns:semantic="sap.m.semantic">
 	
 	<semantic:FullscreenPage
@@ -13,6 +14,20 @@
 					title="{i18n>appTitle}">
 		
 		<semantic:content>
+			
+			<l:HorizontalLayout
+						id="itemsTiles"
+						allowWrapping="true"
+						content="{mainView>/tiles}">
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+								 header="{mainView>header}"
+								 info="{mainView>info}"
+								 press="onPress">
+								 <TileContent footer="{mainView>province} - {mainView>city}">
+									<ImageContent src="{mainView>icon}" />
+								 </TileContent>	 
+					</GenericTile>
+				</l:HorizontalLayout>
 			
 		</semantic:content>
 		
