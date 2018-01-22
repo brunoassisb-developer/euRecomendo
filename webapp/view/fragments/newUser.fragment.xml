@@ -1,0 +1,85 @@
+<core:FragmentDefinition
+		xmlns:core="sap.ui.core"
+		xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
+		xmlns="sap.m">
+		
+		<Dialog
+		    title="{i18n>newUserTitle}"
+		    type='Message'
+		    draggable="true"
+		    contentWidth="70%">
+			
+			<content>
+		
+				<VBox class="sapUiSmallMargin">
+			        
+			        <f:Form id="formNewUser"
+			          editable="true"
+			          ariaLabelledBy="Title1">
+			        	<f:layout>
+				            <f:ResponsiveGridLayout 
+				            		labelSpanXL="12"
+									labelSpanL="12"
+									labelSpanM="12"
+									labelSpanS="12"
+									adjustLabelSpan="false"
+									emptySpanXL="0"
+									emptySpanL="0"
+									emptySpanM="0"
+									emptySpanS="0"
+									columnsXL="12"
+									columnsL="12"
+									columnsM="12"
+									singleContainerFullSize="false" />
+						</f:layout>
+			          <f:formContainers>
+			            <f:FormContainer>
+			              <f:formElements>
+			
+			                <f:FormElement label="{i18n>logonLabelUser}">
+			                  <f:fields>
+				                  <Input id="inputNewUser" 
+				                    	 required="true"/>
+			                  </f:fields>
+			                </f:FormElement>
+			
+							<f:FormElement label="{i18n>logonLabelpassword}">
+			                  <f:fields>
+				                  <Input id="inputNewPassword"
+				                		 type="Password"
+				                    	 required="true"/>
+			                  </f:fields>
+			                </f:FormElement>
+			                
+			                <f:FormElement label="{i18n>logonLabelConfirmPassword}">
+			                  <f:fields>
+				                  <Input id="inputConfirmNewPassword"
+				                		 type="Password"
+				                    	 required="true"/>
+			                  </f:fields>
+			                </f:FormElement>
+			              </f:formElements>
+			            </f:FormContainer>
+			          </f:formContainers>
+			        </f:Form>
+    			</VBox>
+		
+			</content>
+		
+			<buttons>
+			    <Button 
+			    		icon="sap-icon://cancel"
+			    		text="{i18n>logonButtonNo}" 
+			    		type="Reject"
+			    		press="onNewUserClose" />
+			    <Button 
+			    		icon="sap-icon://kpi-managing-my-area"
+			    		text="{i18n>logonButtonYes}"
+			    		type="Emphasized"
+			    		press="onNewUserConfirm" />
+		    </buttons>
+		
+		</Dialog>
+		
+</core:FragmentDefinition>
