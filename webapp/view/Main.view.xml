@@ -13,6 +13,12 @@
 					busyIndicatorDelay="{mainView>/delay}"
 					title="{i18n>appTitle}">
 		
+		<semantic:customHeaderContent>
+			<Button id="logonButton" 
+					icon="sap-icon://customer"
+					press="onLogon" />
+		</semantic:customHeaderContent>
+		
 		<semantic:content>
 			
 			<l:HorizontalLayout
@@ -25,9 +31,9 @@
 								 headerImage="{mainView>icon}"
 								 press="onPress">
 								 <TileContent footer="{mainView>province} - {mainView>city}">
-										<NumericContent value="{mainView>likes}" 
-														valueColor="Good" 
-														indicator="Up"/>
+										<NumericContent value="{mainView>likes}"
+														icon="sap-icon://thumb-up"
+														valueColor="Good"/>
 								 </TileContent>	 
 					</GenericTile>
 				</l:HorizontalLayout>
