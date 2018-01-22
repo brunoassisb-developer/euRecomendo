@@ -172,7 +172,7 @@ sap.ui.define([
 				
 				this.onLogonClose();
 				
-					//Abre Tela de Novo Usuário
+				//Abre Tela de Novo Usuário
 	            if (! this._oDialogNewUser) {
 	               var oView = this.getView();
 	               this._oDialogNewUser = sap.ui.xmlfragment(oView.getId(),"com.sap.euRecomendo.view.fragments.newUser", this);
@@ -230,6 +230,92 @@ sap.ui.define([
 				this.onNewUserClose();	
 			},
 			
+			/**
+			 * @public
+			 */	
+			onTilePress: function(oEvent){
+				 var oModel = sap.ui.getCore().getModel("globalData");
+		         if(!oModel){
+					MessageBox.error(this.getResourceBundle().getText("msgErrorUserNoAuthen"), 
+					                  { styleClass: this.getOwnerComponent().getContentDensityClass() }
+					         );
+					return;
+				}
+				
+				var oItem = oModel.getData();
+				if(!oItem.user){
+					MessageBox.error(this.getResourceBundle().getText("msgErrorUserNoAuthen"), 
+					                  { styleClass: this.getOwnerComponent().getContentDensityClass() }
+					         );
+					return;
+				}
+			},
+		
+			/**
+			 * @public
+			 */				
+			onCreate: function(oEvent){
+				 var oModel = sap.ui.getCore().getModel("globalData");
+		         if(!oModel){
+					MessageBox.error(this.getResourceBundle().getText("msgErrorUserNoAuthen"), 
+					                  { styleClass: this.getOwnerComponent().getContentDensityClass() }
+					         );
+					return;
+				}
+				
+				var oItem = oModel.getData();
+				if(!oItem.user){
+					MessageBox.error(this.getResourceBundle().getText("msgErrorUserNoAuthen"), 
+					                  { styleClass: this.getOwnerComponent().getContentDensityClass() }
+					         );
+					return;
+				}
+				
+				//Abre Tela de Novo Tile
+	            if (! this._oDialogNewTile) {
+	               var oView = this.getView();
+	               this._oDialogNewTile = sap.ui.xmlfragment(oView.getId(),"com.sap.euRecomendo.view.fragments.newTile", this);
+	            }
+
+	            this.getView().addDependent(this._oDialogNewTile);
+	            
+	            // toggle compact style
+	            jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._oDialogNewTile);
+	            this._oDialogNewTile.open();
+				
+			},
+			
+			/**
+			 * @public
+			 */	
+			onNewTileClose: function(oEvent){
+				this._oDialogNewTile.destroy();
+				this._oDialogNewTile = null;
+			},
+			
+			/**
+			 * @public
+			 */	
+			onNewTileConfirm: function(oEvent){
+				
+			
+				
+				var sEstabelecimento = this.byId("inputNewTileEstabelecimento").getValue(),
+					sProvince = this.byId("inputNewTileProvince").getValue(),
+					sCity = this.byId("inputNewTileCity").getValue();
+					
+				if(!sEstabelecimento || !sProvince || !sCity){
+					MessageBox.error(this.getResourceBundle().getText("msgErrorFillAllFields"), 
+					                  { styleClass: this.getOwnerComponent().getContentDensityClass() }
+					         );
+					return;
+				}
+				
+				this.onNewTileClose();
+				MessageBox.success(this.getResourceBundle().getText("msgSuccessCreateEstabelecimento"), 
+					                  { styleClass: this.getOwnerComponent().getContentDensityClass() }
+					         );
+			},
 			/* =========================================================== */
 			/* internal methods                                            */
 			/* =========================================================== */

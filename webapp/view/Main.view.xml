@@ -29,7 +29,7 @@
 								 header="{mainView>header}"
 								 subheader="{mainView>info}"
 								 headerImage="{mainView>icon}"
-								 press="onPress">
+								 press="onTilePress">
 								 <TileContent footer="{mainView>province} - {mainView>city}">
 										<NumericContent value="{mainView>likes}"
 														icon="sap-icon://thumb-up"
