@@ -5,7 +5,7 @@
 			"info": "Hamburgueria",
 			"province": "Soteco",
 			"city": "Vila Velha",
-			"icon": "sap-icon://bbyd-dashboard",
+			"icon": "img/Ricks.png",
 			"category": "Lanchonete"
 		},
 		{
@@ -13,7 +13,7 @@
 			"info": "Lanchonete",
 			"province": "Santa Mônica",
 			"city": "Vila Velha",
-			"icon": "sap-icon://bbyd-dashboard",
+			"icon": "img/Santa.png",
 			"category": "Lanchonete"
 		},
 		{
@@ -21,7 +21,7 @@
 			"info": "Sorveteria",
 			"province": "Itaparica",
 			"city": "Vila Velha",
-			"icon": "sap-icon://bbyd-dashboard",
+			"icon": "img/Frutos.jpg",
 			"category": "Sorveteria"
 		},
 		{
@@ -29,7 +29,7 @@
 			"info": "Pizzaria",
 			"province": "Soteco",
 			"city": "Vila Velha",
-			"icon": "sap-icon://bbyd-dashboard",
+			"icon": "img/Pizzaria.jpg",
 			"category": "Pizzaria"
 		},
 		{
@@ -37,7 +37,7 @@
 			"info": "Bar e Petiscaria",
 			"province": "Soteco",
 			"city": "Vila Velha",
-			"icon": "sap-icon://bbyd-dashboard",
+			"icon": "img/JP.jpg",
 			"category": "Bar"
 		},
 		{
@@ -45,7 +45,7 @@
 			"info": "Lanchonete",
 			"province": "Praia do Canto",
 			"city": "Vitória",
-			"icon": "sap-icon://bbyd-dashboard",
+			"icon": "img/Rock.png",
 			"category": "Lanchonete"
 		}
 	],
