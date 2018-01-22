@@ -102,12 +102,19 @@ sap.ui.define([
 			  */
 			_setTiles: function(){
 				var oGlobalView = this.getModel("initData"),
-					oViewModel = this.getModel("mainView");
+					oViewModel = this.getModel("mainView"),
+					oItems = [];
 					
 				oViewModel.setProperty("/busy", true);
 				
 				var oData = oGlobalView.getProperty("/tiles");
-				oViewModel.setProperty("/tiles", oData);
+				
+				oData.forEach(function(oItem) {
+					oItem.likes = '100';
+					oItems.push(oItem);
+				}, this);
+				
+				oViewModel.setProperty("/tiles", oItems);
 				
 				oViewModel.setProperty("/busy", false);
 			}

@@ -21,10 +21,13 @@
 						content="{mainView>/tiles}">
 					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
 								 header="{mainView>header}"
-								 info="{mainView>info}"
+								 subheader="{mainView>info}"
+								 headerImage="{mainView>icon}"
 								 press="onPress">
 								 <TileContent footer="{mainView>province} - {mainView>city}">
-									<ImageContent src="{mainView>icon}" />
+										<NumericContent value="{mainView>likes}" 
+														valueColor="Good" 
+														indicator="Up"/>
 								 </TileContent>	 
 					</GenericTile>
 				</l:HorizontalLayout>
