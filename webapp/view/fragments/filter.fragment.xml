@@ -1,0 +1,98 @@
+<core:FragmentDefinition
+		xmlns:core="sap.ui.core"
+		xmlns:l="sap.ui.layout"
+		xmlns:fb="sap.ui.comp.filterbar"
+		xmlns="sap.m">
+		
+		<Dialog
+		    title="{i18n>filterTitle}"
+		    type='Message'
+		    draggable="true"
+		    contentWidth="70%">
+			
+			<content>
+		
+				<fb:FilterBar id="filterBarTiles"  
+							  useToolbar="false"
+				              filterBarExpanded="false"
+				              showRestoreButton="false" 
+				              showCancelButton="false"
+				              showGoOnFB="false"
+				              showFilterConfiguration="false">
+				              
+				      <fb:filterItems>
+						<fb:FilterItem 
+									name="tileNameFilter" 
+									label="{i18n>filterLabelTileName}">
+							<fb:control>
+								<SearchField 
+										id="searchTileName"/>
+							</fb:control>				
+						</fb:FilterItem>
+						
+						<fb:FilterItem 
+									   name="tileCategoryFilter" 
+									   label="{i18n>filterLabelTileCategory}">
+							<fb:control>
+								
+								<ComboBox 
+										id="searchTileCategory"
+										type="Text" 
+										items="{ path: 'mainView>/category' }">
+								        <core:Item key="{mainView>text}" text="{mainView>text}"/>
+								</ComboBox>		
+												
+							</fb:control>				
+						</fb:FilterItem>
+						
+						<fb:FilterItem 
+									   name="tileProvinceFilter" 
+									   label="{i18n>filterLabelTileProvince}">
+							<fb:control>
+								
+								<ComboBox 
+										id="searchTileProvince"
+										type="Text" 
+										items="{ path: 'mainView>/province' }">
+								        <core:Item key="{mainView>text}" text="{mainView>text}"/>
+								</ComboBox>		
+												
+							</fb:control>				
+						</fb:FilterItem>
+						
+						<fb:FilterItem 
+									   name="tileCityFilter" 
+									   label="{i18n>filterLabelTileCity}">
+							<fb:control>
+								
+								<ComboBox 
+										id="searchTileCity"
+										type="Text" 
+										items="{ path: 'mainView>/city' }">
+								        <core:Item key="{mainView>text}" text="{mainView>text}"/>
+								</ComboBox>		
+												
+							</fb:control>				
+						</fb:FilterItem>
+						
+					</fb:filterItems>
+				</fb:FilterBar>
+		
+			</content>
+		
+			<buttons>
+			    <Button 
+			    		icon="sap-icon://cancel"
+			    		text="{i18n>filterButtonNo}" 
+			    		type="Reject"
+			    		press="onFilterNo" />
+			    <Button 
+			    		icon="sap-icon://add-filter"
+			    		text="{i18n>filterButtonYes}"
+			    		type="Emphasized"
+			    		press="onFilterYes" />
+		    </buttons>
+		
+		</Dialog>
+		
+</core:FragmentDefinition>
