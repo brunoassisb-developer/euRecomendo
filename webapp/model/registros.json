@@ -1,7 +1,7 @@
 {
 	"tiles": [
 		{
-			"header": "Ricks Burguer",
+			"header": "Rick's Burguer",
 			"info": "Hamburgueria",
 			"province": "Soteco",
 			"city": "Vila Velha",
@@ -49,18 +49,21 @@
 			"category": "Lanchonete"
 		}
 	],
-	"Province": [
+	"province": [
+		{"text": ""},
 		{"text": "Soteco"},
 		{"text": "Santa Mônica"},
 		{"text": "Praia do Canto"}
 	],
-	"City": [
+	"city": [
+		{"text": ""},
 		{"text": "Cariacica"},
 		{"text": "Vila Velha"},
 		{"text": "Vitória"},
 		{"text": "Serra"}
 	],
 	"category": [
+		{"text": ""},
 		{"text": "Restaurante"},
 		{"text": "Bar"},	
 		{"text": "Lanchonete"},
