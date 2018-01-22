@@ -11,6 +11,13 @@
 		    contentWidth="70%">
 			
 			<content>
+				
+				<Button 
+						class="buttonResetFilter"
+			    		icon="sap-icon://clear-filter"
+			    		text="{i18n>filterButtonReset}" 
+			    		type="Default"
+			    		press="onFilterReset"/>
 		
 				<fb:FilterBar id="filterBarTiles"  
 							  useToolbar="false"
@@ -77,7 +84,6 @@
 						
 					</fb:filterItems>
 				</fb:FilterBar>
-		
 			</content>
 		
 			<buttons>
