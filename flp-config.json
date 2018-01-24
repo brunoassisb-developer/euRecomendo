@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "com.sap.euRecomendo.euRecomendo-2",
+        "description": "Eu Recomendo",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/webapp",
+        "appUrl": "#euRecomendo2-Display",
+        "navigationComponentName": "com.sap.euRecomendo",
+        "intentSemanticObject": "euRecomendo-2",
+        "intentAction": "Display",
+        "html5ApplicationName": "eurecomendo",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "c659400f-00a7-4ec0-8fc6-3d30e3244381"
+        ],
+        "contentPackages": [
+            "085f689f-1b69-450e-b2e2-50a07e7fe179"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Title",
+        "subtitle": "Subtitle",
+        "searchKeywords": "Title,Subtitle",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

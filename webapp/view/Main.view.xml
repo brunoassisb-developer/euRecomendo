@@ -21,23 +21,27 @@
 		
 		<semantic:content>
 			
-			<l:HorizontalLayout
-						id="itemsTiles"
-						allowWrapping="true"
-						content="{mainView>/tiles}">
-					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
-								 header="{mainView>header}"
-								 tooltip="{mainView>_id}"
-								 subheader="{mainView>info}"
-								 headerImage="{mainView>icon}"
-								 press="onTilePress">
-								 <TileContent footer="{mainView>province} - {mainView>city}">
-										<NumericContent value="{mainView>likes}"
-														icon="sap-icon://thumb-up"
-														valueColor="Good"/>
-								 </TileContent>	 
-					</GenericTile>
+			<l:Grid>
+				<l:HorizontalLayout
+							id="itemsTiles"
+							allowWrapping="true"
+							class="sapUiSmallMarginTop"
+							content="{mainView>/tiles}">
+					
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+									 header="{mainView>header}"
+									 tooltip="{mainView>_id}"
+									 subheader="{mainView>info}"
+									 headerImage="{mainView>icon}"
+									 press="onTilePress">
+									 <TileContent footer="{mainView>province} - {mainView>city}">
+											<NumericContent value="{mainView>likes}"
+															icon="sap-icon://thumb-up"
+															valueColor="Good"/>
+									 </TileContent>	 
+						</GenericTile>
 				</l:HorizontalLayout>
+			</l:Grid>
 			
 		</semantic:content>
 		
