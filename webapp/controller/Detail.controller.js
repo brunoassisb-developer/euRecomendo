@@ -30,7 +30,6 @@ sap.ui.define([
 				this.getRouter().getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
 				this.setModel(oViewModel, "detailView");
 			},
-
 			/* =========================================================== */
 			/* event handlers                                              */
 			/* =========================================================== */
@@ -39,6 +38,9 @@ sap.ui.define([
 			 */			
 			onNavBack : function() {
 		    	 var sPreviousHash = History.getInstance().getPreviousHash();
+		    	 
+		    	 var oTimeLine = this.byId("idTimeline");
+				 oTimeLine.exit();
 
 		         if (sPreviousHash !== undefined) {
 		           history.go(-1);

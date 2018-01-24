@@ -5,25 +5,25 @@
 		xmlns:u="sap.suite.ui.commons"
 		xmlns="sap.m"
 		height="100%">
+	
 				<VBox>
+					
 					<Text text="{i18n>newTileLabelRecomendacao}" 
 					  class="sapUiTinyMarginTop"/>
 					<TextArea id="recommendsViewRecomendacao" 
 					      rows="2"
 					      width="100%"/>
-				</VBox>
 				
-				<Panel id="idPanel"
-	        			height="100%">
 						<u:Timeline
 								id="idTimeline"
 								enableDoubleSided="false"
+								growing="false"
 								alignment="Rigth"
 								groupBy="HireDate"
-								growingThreshold="0"
 								sortOldestFirst="true"
 								showFilterBar="false"
 								showHeaderBar="false"
+								textHeight="automatic"
 								content="{detailView>/recommends}">
 							<u:content>
 								<u:TimelineItem
@@ -37,5 +37,7 @@
 								</u:TimelineItem>
 							</u:content>
 						</u:Timeline>
-				</Panel>
+						
+				</VBox>
+				
 </core:FragmentDefinition>

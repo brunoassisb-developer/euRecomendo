@@ -7,7 +7,7 @@
 			"province": "Soteco",
 			"city": "Vila Velha",
 			"icon": "sap-icon://meal",
-			"logo": "img/Ricks.png",
+			"logo": "./img/Ricks.png",
 			"category": "Lanchonete"
 		},
 		{
@@ -17,7 +17,7 @@
 			"province": "Santa Mônica",
 			"city": "Vila Velha",
 			"icon": "sap-icon://meal",
-			"logo": "img/Santa.png",
+			"logo": "./img/Santa.png",
 			"category": "Lanchonete"
 		},
 		{
@@ -27,7 +27,7 @@
 			"province": "Itaparica",
 			"city": "Vila Velha",
 			"icon": "sap-icon://retail-store",
-			"logo": "img/Frutos.jpg",
+			"logo": "./img/Frutos.jpg",
 			"category": "Sorveteria"
 		},
 		{
@@ -37,7 +37,7 @@
 			"province": "Soteco",
 			"city": "Vila Velha",
 			"icon": "sap-icon://meal",
-			"logo": "img/Pizzaria.jpg",
+			"logo": "./img/Pizzaria.jpg",
 			"category": "Pizzaria"
 		},
 		{
@@ -47,7 +47,7 @@
 			"province": "Soteco",
 			"city": "Vila Velha",
 			"icon": "sap-icon://meal",
-			"logo": "img/JP.jpg",
+			"logo": "./img/JP.jpg",
 			"category": "Bar"
 		},
 		{
@@ -57,7 +57,7 @@
 			"province": "Praia do Canto",
 			"city": "Vitória",
 			"icon": "sap-icon://meal",
-			"logo": "img/Rock.png",
+			"logo": "./img/Rock.png",
 			"category": "Lanchonete"
 		}
 	],
@@ -84,7 +84,7 @@
 			"_idTile": "001",
 			"hireDate": "",
 			"userName": "José Augusto",
-			"photo": "img/user_1.png",
+			"photo": "./img/user_1.png",
 			"text": "Nunca comi um Hamburguer tão bom! Recomendo",
 			"icon": "sap-icon://badge"
 		},
@@ -92,7 +92,7 @@
 			"_idTile": "001",
 			"hireDate": "",
 			"userName": "José Pedro",
-			"photo": "img/user_2.jpg",
+			"photo": "./img/user_2.jpg",
 			"text": "Deliciosa Batata Frita. #EURECOMENDO",
 			"icon": "sap-icon://badge"
 		},
@@ -100,7 +100,7 @@
 			"_idTile": "001",
 			"hireDate": "",
 			"userName": "José Henrique",
-			"photo": "img/user_3.jpg",
+			"photo": "./img/user_3.jpg",
 			"text": "Atendimento SENSACIONAL!!!",
 			"icon": "sap-icon://badge"
 		}

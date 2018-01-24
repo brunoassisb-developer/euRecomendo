@@ -11,18 +11,18 @@
 			"version": "1.0.0"
 		},
 		"dataSources": {
-    		"mainService": {
-		        "uri": "/",
-		        "type": "OData",
-		        "settings": {
-		          "odataVersion": "2.0"
-		        }
-    		  },
-		     "initDataAlias": {
-						"uri": "model/registros.json",
-						"type": "JSON"
-			 }
-    	},
+			"mainService": {
+				"uri": "/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			},
+			"initDataAlias": {
+				"uri": "model/registros.json",
+				"type": "JSON"
+			}
+		},
 		"sourceTemplate": {
 			"id": "sap.ui.ui5-template-plugin.1worklist",
 			"version": "1.36.2"
@@ -109,45 +109,49 @@
 			]
 		},
 		"routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "viewType": "XML",
-        "viewPath": "com.sap.euRecomendo.view",
-        "controlId": "app",
-        "controlAggregation": "pages",
-        "bypassed": {
-          "target": [ ]
-        },
-        "async": true
-      },
-      "routes": [
-        {
-          "pattern": "",
-          "name": "main",
-          "target": [
-            "main"
-          ]
-        },
-        {
-          "pattern": "DetailSet/{sId}",
-          "name": "detail",
-          "target": [
-            "detail"
-          ]
-        }
-      ],
-      "targets": {
-        "main": {
-          "viewName": "Main",
-          "viewId": "main",
-          "viewLevel": 1
-        },
-        "detail": {
-          "viewName": "Detail",
-          "viewId": "detail",
-          "viewLevel": 2
-        }
-      }
-    }
-  }
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.euRecomendo.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": []
+				},
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "main",
+					"target": [
+						"main"
+					]
+				},
+				{
+					"pattern": "DetailSet/{sId}",
+					"name": "detail",
+					"target": [
+						"detail"
+					]
+				}
+			],
+			"targets": {
+				"main": {
+					"viewName": "Main",
+					"viewId": "main",
+					"viewLevel": 1
+				},
+				"detail": {
+					"viewName": "Detail",
+					"viewId": "detail",
+					"viewLevel": 2
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
 }
