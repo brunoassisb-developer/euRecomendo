@@ -1,6 +1,7 @@
 <core:FragmentDefinition
 		xmlns:core="sap.ui.core"
 		xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
 		xmlns:fb="sap.ui.comp.filterbar"
 		xmlns="sap.m">
 		
@@ -14,76 +15,81 @@
 				
 				<Button 
 						class="buttonResetFilter"
-			    		icon="sap-icon://clear-filter"
-			    		text="{i18n>filterButtonReset}" 
-			    		type="Default"
-			    		press="onFilterReset"/>
-		
-				<fb:FilterBar id="filterBarTiles"  
-							  useToolbar="false"
-				              filterBarExpanded="false"
-				              showRestoreButton="false" 
-				              showCancelButton="false"
-				              showGoOnFB="false"
-				              showFilterConfiguration="false">
-				              
-				      <fb:filterItems>
-						<fb:FilterItem 
-									name="tileNameFilter" 
-									label="{i18n>filterLabelTileName}">
-							<fb:control>
-								<SearchField 
+						icon="sap-icon://clear-filter"
+						text="{i18n>filterButtonReset}" 
+						type="Default"
+						press="onFilterReset"/>
+				
+				<VBox class="sapUiSmallMargin">
+			        
+			        <f:Form id="formLogon"
+			          editable="true"
+			          ariaLabelledBy="Title1">
+			        	<f:layout>
+				            <f:ResponsiveGridLayout 
+				            		labelSpanXL="12"
+									labelSpanL="12"
+									labelSpanM="12"
+									labelSpanS="12"
+									adjustLabelSpan="false"
+									emptySpanXL="0"
+									emptySpanL="0"
+									emptySpanM="0"
+									emptySpanS="0"
+									columnsXL="12"
+									columnsL="12"
+									columnsM="12"
+									singleContainerFullSize="false" />
+						</f:layout>
+			          <f:formContainers>
+			            <f:FormContainer>
+			              <f:formElements>
+			
+							<f:FormElement label="{i18n>filterLabelTileName}">
+			                  <f:fields>
+				                  <SearchField 
 										id="searchTileName"/>
-							</fb:control>				
-						</fb:FilterItem>
-						
-						<fb:FilterItem 
-									   name="tileCategoryFilter" 
-									   label="{i18n>filterLabelTileCategory}">
-							<fb:control>
-								
-								<ComboBox 
+			                  </f:fields>
+			                </f:FormElement>
+			                
+			                <f:FormElement label="{i18n>filterLabelTileCategory}">
+			                  <f:fields>
+				                  <ComboBox 
 										id="searchTileCategory"
 										type="Text" 
 										items="{ path: 'mainView>/category' }">
 								        <core:Item key="{mainView>text}" text="{mainView>text}"/>
-								</ComboBox>		
-												
-							</fb:control>				
-						</fb:FilterItem>
-						
-						<fb:FilterItem 
-									   name="tileProvinceFilter" 
-									   label="{i18n>filterLabelTileProvince}">
-							<fb:control>
-								
-								<ComboBox 
+								</ComboBox>
+			                  </f:fields>
+			                </f:FormElement>
+			                
+			                <f:FormElement label="{i18n>filterLabelTileProvince}">
+			                  <f:fields>
+				                  <ComboBox 
 										id="searchTileProvince"
 										type="Text" 
 										items="{ path: 'mainView>/province' }">
 								        <core:Item key="{mainView>text}" text="{mainView>text}"/>
-								</ComboBox>		
-												
-							</fb:control>				
-						</fb:FilterItem>
-						
-						<fb:FilterItem 
-									   name="tileCityFilter" 
-									   label="{i18n>filterLabelTileCity}">
-							<fb:control>
-								
-								<ComboBox 
+								</ComboBox>	
+			                  </f:fields>
+			                </f:FormElement>
+			                
+			                <f:FormElement label="{i18n>filterLabelTileCity}">
+			                  <f:fields>
+				                  <ComboBox 
 										id="searchTileCity"
 										type="Text" 
 										items="{ path: 'mainView>/city' }">
 								        <core:Item key="{mainView>text}" text="{mainView>text}"/>
-								</ComboBox>		
-												
-							</fb:control>				
-						</fb:FilterItem>
-						
-					</fb:filterItems>
-				</fb:FilterBar>
+								</ComboBox>
+			                  </f:fields>
+			                </f:FormElement>
+
+			              </f:formElements>
+			            </f:FormContainer>
+			          </f:formContainers>
+			        </f:Form>
+    			</VBox>
 			</content>
 		
 			<buttons>

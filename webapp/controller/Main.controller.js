@@ -259,6 +259,13 @@ sap.ui.define([
 					         );
 					return;
 				}
+				
+				var oTile = oEvent.getSource(),
+			    sId = oTile.getTooltip();
+				
+				this.getRouter().navTo("detail", {
+					sId : sId
+				});
 			},
 		
 			/**

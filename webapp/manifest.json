@@ -127,6 +127,13 @@
           "target": [
             "main"
           ]
+        },
+        {
+          "pattern": "DetailSet/{sId}",
+          "name": "detail",
+          "target": [
+            "detail"
+          ]
         }
       ],
       "targets": {
@@ -134,6 +141,11 @@
           "viewName": "Main",
           "viewId": "main",
           "viewLevel": 1
+        },
+        "detail": {
+          "viewName": "Detail",
+          "viewId": "detail",
+          "viewLevel": 2
         }
       }
     }
