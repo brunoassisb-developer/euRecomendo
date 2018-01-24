@@ -1,0 +1,76 @@
+<mvc:View controllerName="com.sap.euRecomendo.controller.Detail" 
+		  xmlns:html="http://www.w3.org/1999/xhtml" 
+		  xmlns:mvc="sap.ui.core.mvc"
+		  displayBlock="true" 
+		  xmlns="sap.m"
+		  xmlns:core="sap.ui.core"
+		  xmlns:u="sap.uxap"
+		  xmlns:l="sap.ui.layout"
+		  xmlns:semantic="sap.m.semantic">
+	
+	<semantic:FullscreenPage
+					id="detail"
+					navButtonPress="onNavBack"
+					showNavButton="true"
+					busy="{detailView>/busy}"
+					busyIndicatorDelay="{detailView>/delay}"
+					title="{i18n>appTitle}">
+		
+		<semantic:customHeaderContent>
+			<Button id="logonDetailButton"/>
+		</semantic:customHeaderContent>
+		
+		<semantic:content>
+			
+			<u:ObjectPageLayout id="detailPageLayout" 
+							  enableLazyLoading="false">
+		
+			<u:headerTitle>
+				<u:ObjectPageHeader id="objectHeader" 
+								    objectTitle="{detailView>/info/header}" 
+								    objectSubtitle="{detailView>/info/info}"
+								    objectImageShape="Circle"
+								    objectImageURI="{detailView>/info/logo}"
+								    isObjectIconAlwaysVisible="true"
+									isObjectTitleAlwaysVisible="true"
+									showPlaceholder="true"
+								    headerDesign="Light">
+					<u:actions>
+						<u:ObjectPageHeaderActionButton icon="sap-icon://map"
+														type="Default"/>
+					</u:actions>
+				</u:ObjectPageHeader>
+			</u:headerTitle>
+			
+			<u:headerContent>
+				<l:VerticalLayout>
+					<ObjectStatus title="{i18n>detailLocalLabel}" 
+								  text="{detailView>/info/province} - {detailView>/info/city}"/>
+				</l:VerticalLayout>
+			</u:headerContent>
+		
+			<u:sections>
+				<u:ObjectPageSection title="">
+					<u:subSections>
+						<u:ObjectPageSubSection title="{i18n>detailSectionTitleRecommendation}">
+							<u:blocks>
+								<core:Fragment fragmentName="com.sap.euRecomendo.view.fragments.recommends" type="XML"/>
+							</u:blocks>
+						</u:ObjectPageSubSection>
+					</u:subSections>
+				</u:ObjectPageSection>
+			</u:sections>
+		</u:ObjectPageLayout>
+			
+		</semantic:content>
+		
+		<semantic:customFooterContent> 
+			<Button 
+				icon="sap-icon://accept"
+				type="Accept" 
+				text="{i18n>detailRecommendSaveButton}"
+				press="onRecommend"/>
+		</semantic:customFooterContent>
+
+	</semantic:FullscreenPage>
+</mvc:View>

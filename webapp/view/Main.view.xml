@@ -27,6 +27,7 @@
 						content="{mainView>/tiles}">
 					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
 								 header="{mainView>header}"
+								 tooltip="{mainView>_id}"
 								 subheader="{mainView>info}"
 								 headerImage="{mainView>icon}"
 								 press="onTilePress">
