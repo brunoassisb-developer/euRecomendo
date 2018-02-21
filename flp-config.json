@@ -2,7 +2,6 @@
     "application": {
         "id": "",
         "title": "com.sap.euRecomendo.euRecomendo-2",
-        "description": "Eu Recomendo",
         "type": "SAP_UI5_Component",
         "componentUrl": "/webapp",
         "appUrl": "#euRecomendo2-Display",

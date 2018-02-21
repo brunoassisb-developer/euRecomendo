@@ -2,7 +2,7 @@
   "hcpdeploy": {
     "account": "p1942811628trial",
     "name": "eurecomendo",
-    "lastVersionWeTriedToDeploy": "1.0.0"
+    "lastVersionWeTriedToDeploy": "1.0.2"
   },
   "hybrid": {
     "appname": "EU Recomendo",

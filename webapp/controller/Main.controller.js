@@ -127,7 +127,7 @@ sap.ui.define([
 			 */				
 			onLogon: function(oEvent){
 				//Abre Tela de Logon
-	            if (! this._oDialogLogon) {
+	            /*if (! this._oDialogLogon) {
 	               var oView = this.getView();
 	               this._oDialogLogon = sap.ui.xmlfragment(oView.getId(),"com.sap.euRecomendo.view.fragments.logon", this);
 	            }
@@ -136,7 +136,19 @@ sap.ui.define([
 	            
 	            // toggle compact style
 	            jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._oDialogLogon);
-	            this._oDialogLogon.open();	
+	            this._oDialogLogon.open();*/
+	            
+			            $.ajax({
+		                                  type: 'GET',
+		                                  url : "http://eurecomendo.kinghost.net:21193/auth/facebook",
+		                                  dataType: 'json',
+		                                  success: function(data,textStatus,jqXHR) {
+		                                                  console.log(data);
+							     },
+							     error : function(jqXHR,textStatus,errorThrown) {
+									console.log("error");
+							     }
+			            });
 			},
 			
 			/**
